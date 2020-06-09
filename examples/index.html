@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="css/example.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="um scroll">
+        <img src="images/ceu-camada1.png" alt="" />
+    </div>
+
+    <div class="tres scroll">
+        <img src="images/ceu-camada-2.png" alt="" />
+    </div>
+
+    <div class="quarto scroll">
+        <img src="images/1.png" alt="" />
+    </div>
+
+    <div class="sete scroll" id="set">
+        <img src="images/main.png"/>
+    </div>
+
+    <div class="radio" style="position: fixed; right: 15px;">
+        <img src="images/radio.png" />
+        <audio id="myAudio">
+            <source src="images/mix.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="oito scroll">
+        <img src="images/estrada.png" alt="" />
+    </div>
+
+    <div class="grass scroll">
+        <img src="images/relva.png" alt="" />
+    </div>
+
+        <img id="van" class="scroll" src="images/carrinhas%20coloridas/red.gif" alt="" style="position:fixed;" >
+
+
+    <div class="garage scroll" style="width:25954px;">
+        <img src="images/garagem.png" style="z-index:3;" >
+    </div>
+
+    <div class="anime scroll">
+        <button onclick="chgBtn('imgStLz')" class="butao" style="left: 2718px; top: 128px;">
+        </button>
+        <img id="imgStLz" src="images/infoSLuzia.png" style="position:relative;left:2718px;top:128px;display: none">
+
+        <button onclick="chgBtn('imgStLz2')" class="butao" style="left: 8553px; top: 405px;">
+        </button>
+        <img id="imgStLz2" src="images/infoCasteloGuimaraes.png" style="position:relative;left:8553px;top:405px;display: none">
+
+        <button onclick="chgBtn('imgStLz3')" class="butao" style="left: 5700px; top: 430px;">
+        </button>
+        <img id="imgStLz3" src="images/infoBomJesus.png" style="position:relative;left:5700px;top:430px;display: none">
+
+        <button onclick="chgBtn('imgStLz4')" class="butao" style="left: 12390px; top: 350px;">
+        </button>
+        <img id="imgStLz4" src="images/infoPortoClerigos.png" style="position:relative;left:12390px;top:350px;display: none">
+
+        <button onclick="chgBtn('imgStLz5')" class="butao" style="left: 15205px; top: 555px;">
+        </button>
+        <img id="imgStLz5" src="images/infoAveiro.png" style="position:relative;left:15205px;top:300px;display: none">
+
+        <button onclick="chgBtn('imgStLz6')" class="butao" style="left: 17904px; top: 470px;">
+        </button>
+        <img id="imgStLz6" src="images/infoCoimbra.png" style="position:relative;left:17904px;top:470px;display: none">
+
+        <button onclick="chgBtn('imgStLz7')" class="butao" style="left: 20550px; top: 450px;">
+        </button>
+        <img id="imgStLz7" src="images/infoLisboa.png" style="position:relative;left:20550px;top:450px;display: none">
+
+
+        <button onclick="playAudio()" type="button" style="position: fixed; top: 31px; right: 199px; width: 20px; height: 20px; background-color: transparent; border: none;"></button>
+        <button onclick="pauseAudio()" type="button" style="position: fixed; top: 31px; right: 29px; width: 20px; height: 20px; background-color: transparent; border: none;"></button>
+
+        <button onclick="changeImage('images/carrinhas%20coloridas/blue.gif')" class="butao" style="left : -231px; top:349px; height:24px; width:34px;">
+        </button>
+
+        <button onclick="changeImage('images/carrinhas%20coloridas/orange.gif')" class="butao" style="left : -215px; top:349px; height:24px; width:34px;">
+        </button>
+
+        <button onclick="changeImage('images/carrinhas%20coloridas/yellow.gif')" class="butao" style="left : -196px; top:349px; height:24px; width:34px;">
+        </button>
+
+        <button onclick="changeImage('images/carrinhas%20coloridas/red.gif')" class="butao" style="left : -183px; top:349px; height:24px; width:34px;">
+        </button>
+    </div>
+        
+
+
+    <!--Inverter Scroll Lib-->
+    <script type="text/javascript" src="../libs/jquery.min.js"></script>
+    <script type="text/javascript" src="../dist/js/jquery.jInvertScroll.js"></script>
+    <script type="text/javascript">
+    (function($) {
+        $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+            {
+            height: 75000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+            onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                console.log(percent);
+            }
+
+        });
+    }(jQuery));
+    </script>
+    <script>
+        function chgBtn(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "none") {
+        x.style.display = "block";
+        } else {
+        x.style.display = "none";
+        }
+    }
+    </script>
+
+    <script>
+        var x = document.getElementById("myAudio");
+
+        function playAudio() {
+            x.play();
+        }
+
+        function pauseAudio() {
+            x.pause();
+        }
+    </script>
+
+    <script type="text/javascript">
+        function changeImage(a) {
+            document.getElementById("van").src=a;
+            document.getElementById("van").style.position="fixed";
+        }
+    </script>
+
+
+    <!--Libgif-->
+    <script src="../src/libgif.js"></script>
+    <!--Scroll Animations Lib-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+html,
+body
+{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
+body
+{
+  overflow-x: hidden;
+}
+
+h1
+{
+  font-size: 20px;
+  font-weight: normal;
+  color: #2e6e80;
+}
+
+/**
+  * important: keep position fixed, you can however use top:0 instead of bottom:0
+  * if you want to make it stick to the top of the browser
+  */
+.scroll
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/**
+  * z-index ordering of the different layers, do this for your layers,
+  * also assign absolute width (to prevent issues if the script gets executed before the images get loaded)
+  */
+.um
+{
+  z-index: 0;
+  width: 9954px;
+}
+
+.dois
+{
+  z-index: 0;
+  width: 13954px;
+}
+
+.tres{
+  z-index: 0;
+  width: 15954px;
+}
+
+.quarto{
+  z-index:0;
+  width: 20954px;
+}
+
+.sete{
+  z-index: 0;
+  width: 25954px;
+}
+
+.oito{
+  z-index: 0;
+  width: 33954px;
+}
+
+.grass{
+  z-index:0;
+  width:37954px;
+}
+
+.carrinha{
+  z-index:120;
+  width:25954px;
+}
+
+.anime{
+  width:25954px;
+  height: 768px;
+}
+
+.butao{
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.butao:hover {
+  background-color: #ffff00;
+  opacity: 0.3;
+}
+
+a:hover {
+  background-color: #ffff00;
+}
+
+#btn2{
+  height: 50px;
+}
